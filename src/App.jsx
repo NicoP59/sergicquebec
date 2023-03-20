@@ -1,3 +1,12 @@
+import React from 'react';
+import Header from './components/Header';
+
 export default function App() {
-  return <div className='App'>prout</div>;
+  return (
+    <div className='App'>
+      <main>
+        <Header />
+      </main>
+    </div>
+  );
 }
