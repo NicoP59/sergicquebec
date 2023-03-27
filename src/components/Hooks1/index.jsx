@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Etat() {
   const [monEtat, setMonEtat] = useState(false);
   const toggleOpen = () => {
-    setMonEtat((previous) => !previous);
+    setMonEtat(!monEtat);
   };
 
   return (
