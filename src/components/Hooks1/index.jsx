@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HooksStyled from './styles';
 
 export default function Etat() {
   const [monEtat, setMonEtat] = useState(false);
@@ -7,20 +8,22 @@ export default function Etat() {
   };
 
   return (
-    <div className='container'>
-      <h2>NOS SERVICES</h2>
-      <div className='hooks'>
-        <article className='bloc-hooks'>
+    <HooksStyled>
+      <div className='container'>
+        <h2>NOS SERVICES</h2>
+        <div className='hooks'>
           <div className='pasOuvert'>
             <div className='image'>
-              <img src='./img/picothèque-buildings.svg' alt='' />
+              <img
+                src='./img/pictothèque-buildings.svg'
+                alt=''
+                className='img'
+              />
             </div>
-            <h3 className='titre'>
-              Gestion de la copropriété{' '}
-              <button className='showMore' onClick={toggleOpen}>
-                {monEtat ? '-' : '+'}
-              </button>
-            </h3>
+            <p className='p'>Gestion de la copropriété </p>
+            <button className='showMore' onClick={toggleOpen}>
+              {monEtat ? '-' : '+'}
+            </button>
           </div>
           {monEtat && (
             <div className='ouvert'>
@@ -45,8 +48,8 @@ export default function Etat() {
               </p>
             </div>
           )}
-        </article>
+        </div>
       </div>
-    </div>
+    </HooksStyled>
   );
 }

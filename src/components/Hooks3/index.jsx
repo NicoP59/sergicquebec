@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Hooks3Styled from './styles';
 
 export default function Condo() {
   const [monCondo, setMonCondo] = useState(false);
@@ -7,19 +8,17 @@ export default function Condo() {
   };
 
   return (
-    <div className='container'>
-      <div className='hooks'>
-        <article className='bloc-hooks'>
+    <Hooks3Styled>
+      <div className='container'>
+        <div className='hooks'>
           <div className='pasOuvert'>
             <div className='image'>
-              <img src='./img/picothèque-key.png' alt='' />
+              <img src='./img/pictothèque-key.png' alt='' />
             </div>
-            <h3 className='titre'>
-              Location de votre condo/plex{' '}
-              <button className='showMore' onClick={toggleOpen}>
-                {monCondo ? '-' : '+'}
-              </button>
-            </h3>
+            <p className='p'>Location de votre condo/plex </p>
+            <button className='showMore' onClick={toggleOpen}>
+              {monCondo ? '-' : '+'}
+            </button>
           </div>
           {monCondo && (
             <div className='ouvert'>
@@ -33,8 +32,8 @@ export default function Condo() {
               </p>
             </div>
           )}
-        </article>
+        </div>
       </div>
-    </div>
+    </Hooks3Styled>
   );
 }
