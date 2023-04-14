@@ -7,89 +7,91 @@ export default function MapComponent() {
   return (
     <MapStyled>
       <div className='container'>
+        <h2 className='titre'>
+          NOS COMPAGNIES, AU SERVICE DE VOS PROJETS IMMOBILIERS
+        </h2>
         <div className='container2'>
-          <h2 className='titre'>
-            NOS COMPAGNIES, AU SERVICE DE VOS PROJETS IMMOBILIERS
-          </h2>
-          <div className='container3'>
-            <div className='map'>
-              <MapContainer
-                center={[51.505, -0.09]}
-                zoom={13}
-                style={{ height: '400px' }}
-              >
-                <TileLayer
-                  attribution='&amp;copy <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-                  url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-                />
-                <Marker position={[-73.998, -73.47]}>
-                  <Popup>Tu ma trouvé</Popup>
-                </Marker>
-              </MapContainer>
+          <div className='map'>
+            <MapContainer
+              className='map2'
+              center={[51.505, -0.09]}
+              zoom={13}
+              style={{ height: '400px' }}
+            >
+              <TileLayer
+                attribution='&amp;copy <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+                url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+              />
+              <Marker position={[-73.998, -73.47]}>
+                <Popup>Tu ma trouvé</Popup>
+              </Marker>
+            </MapContainer>
+          </div>
+
+          {/* Carte agence */}
+          <div className='container-agence'>
+            <div className='agence'>
+              <h4>Agence de Laval</h4>
+              <div className='img'>
+                <img src='./' alt='' />
+              </div>
+              <div className='localisation'>
+                <p>1645 desserte nord autoroute 440</p>
+                <p>Laval</p>
+                <p>QC H7L 354</p>
+                <div className='fleche'></div>
+              </div>
             </div>
-            <ul>
-              <li>
-                <h4>Agence de Laval</h4>
-                <div className='img'>
-                  <img src='' alt='' />
-                </div>
-                <div className='localisation'>
-                  <p>1645 desserte nord autoroute 440</p>
-                  <p>Laval</p>
-                  <p>QC H7L 354</p>
-                  <div className='fleche'></div>
-                </div>
-              </li>
-              <li>
-                <h4>Agence de Mont-Tremblant</h4>
-                <div className='img'>
-                  <img src='' alt='' />
-                </div>
-                <div className='localisation'>
-                  <p>3-1001 rue de st jovite</p>
-                  <p>Mont-Tremblant</p>
-                  <p>QC J8E 338</p>
-                  <div className='fleche'></div>
-                </div>
-              </li>
-              <li>
-                <h4>Agence de Québec</h4>
-                <div className='img'>
-                  <img src='' alt='' />
-                </div>
-                <div className='localisation'>
-                  <p>1694 1re av.</p>
-                  <p>Québec</p>
-                  <p>QC G1L 3L6</p>
-                  <div className='fleche'></div>
-                </div>
-              </li>
-              <li>
-                <h4>Agence de Montréal</h4>
-                <div className='img'>
-                  <img src='' alt='' />
-                </div>
-                <div className='localisation'>
-                  <p>5160 bd décarie bureau 500</p>
-                  <p>Montréal</p>
-                  <p>QC H3X 2H9</p>
-                  <div className='fleche'></div>
-                </div>
-              </li>
-              <li>
-                <h4>Agence de Montréal</h4>
-                <div className='img'>
-                  <img src='' alt='' />
-                </div>
-                <div className='localisation'>
-                  <p>5160 bd décarie bureau 500</p>
-                  <p>Montréal</p>
-                  <p>QC H3X 2H9</p>
-                  <div className='fleche'></div>
-                </div>
-              </li>
-            </ul>
-            <button>Retour</button>
+            <div className='agence'>
+              <h4>Agence de Mont-Tremblant</h4>
+              <div className='img'>
+                <img src='' alt='' />
+              </div>
+              <div className='localisation'>
+                <p>3-1001 rue de st jovite</p>
+                <p>Mont-Tremblant</p>
+                <p>QC J8E 338</p>
+                <div className='fleche'></div>
+              </div>
+            </div>
+            <div className='agence'>
+              <h4>Agence de Québec</h4>
+              <div className='img'>
+                <img src='' alt='' />
+              </div>
+              <div className='localisation'>
+                <p>1694 1re av.</p>
+                <p>Québec</p>
+                <p>QC G1L 3L6</p>
+                <div className='fleche'></div>
+              </div>
+            </div>
+            <div className='agence'>
+              <h4>Agence de Montréal</h4>
+              <div className='img'>
+                <img src='' alt='' />
+              </div>
+              <div className='localisation'>
+                <p>5160 bd décarie bureau 500</p>
+                <p>Montréal</p>
+                <p>QC H3X 2H9</p>
+                <div className='fleche'></div>
+              </div>
+            </div>
+            <div className='agence'>
+              <h4>Agence de Montréal</h4>
+              <div className='img'>
+                <img src='' alt='' />
+              </div>
+              <div className='localisation'>
+                <p>5160 bd décarie bureau 500</p>
+                <p>Montréal</p>
+                <p>QC H3X 2H9</p>
+                <div className='fleche'></div>
+              </div>
+            </div>
+
+            {/* <button>Retour</button>
             <div className='location-details'>
               <div className='sequoia'>
                 <img src='' alt='' />
@@ -131,8 +133,12 @@ export default function MapComponent() {
                 </ul>
               </div>
               <a href='/'>Découvrez la compagnie</a>
-            </div>
+            </div> */}
+
+            {/* agence */}
           </div>
+
+          {/* container 1 et 2 */}
         </div>
       </div>
     </MapStyled>

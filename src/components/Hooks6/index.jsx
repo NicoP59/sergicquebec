@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Hooks6Styled from './styles';
 
 export default function Gestion() {
   const [monGestion, setMonGestion] = useState(false);
@@ -7,19 +8,17 @@ export default function Gestion() {
   };
 
   return (
-    <div className='container'>
-      <div className='hooks'>
-        <article className='bloc-hooks'>
+    <Hooks6Styled>
+      <div className='container'>
+        <div className='hooks'>
           <div className='pasOuvert'>
             <div className='image'>
-              <img src='./img/picothèque-cog.png' alt='' />
+              <img src='./img/pictothèque-cog.png' alt='' />
             </div>
-            <h3 className='titre'>
-              Gestion technique des projets immobiliers{' '}
-              <button className='showMore' onClick={toggleOpen}>
-                {monGestion ? '-' : '+'}
-              </button>
-            </h3>
+            <p className='p'>Gestion technique des projets immobiliers </p>
+            <button className='showMore' onClick={toggleOpen}>
+              {monGestion ? '-' : '+'}
+            </button>
           </div>
           {monGestion && (
             <div className='ouvert'>
@@ -31,8 +30,8 @@ export default function Gestion() {
               </p>
             </div>
           )}
-        </article>
+        </div>
       </div>
-    </div>
+    </Hooks6Styled>
   );
 }

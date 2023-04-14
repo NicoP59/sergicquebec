@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Hooks2Styled from './styles';
 
 export default function Loca() {
   const [monLoca, setMonLoca] = useState(false);
@@ -7,19 +8,17 @@ export default function Loca() {
   };
 
   return (
-    <div className='container'>
-      <div className='hooks'>
-        <article className='bloc-hooks'>
+    <Hooks2Styled>
+      <div className='container'>
+        <div className='hooks'>
           <div className='pasOuvert'>
             <div className='image'>
-              <img src='./img/picothèque-like-house.svg' alt='' />
+              <img src='./img/pictothèque-like-house.svg' alt='' />
             </div>
-            <h3 className='titre'>
-              Gestion locative{' '}
-              <button className='showMore' onClick={toggleOpen}>
-                {monLoca ? '-' : '+'}
-              </button>
-            </h3>
+            <p className='p'>Gestion locative </p>
+            <button className='showMore' onClick={toggleOpen}>
+              {monLoca ? '-' : '+'}
+            </button>
           </div>
           {monLoca && (
             <div className='ouvert'>
@@ -34,8 +33,8 @@ export default function Loca() {
               </p>
             </div>
           )}
-        </article>
+        </div>
       </div>
-    </div>
+    </Hooks2Styled>
   );
 }

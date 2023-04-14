@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Hooks4Styled from './styles';
 
 export default function Vente() {
   const [monVente, setMonVente] = useState(false);
@@ -7,19 +8,17 @@ export default function Vente() {
   };
 
   return (
-    <div className='container'>
-      <div className='hooks'>
-        <article className='bloc-hooks'>
+    <Hooks4Styled>
+      <div className='container'>
+        <div className='hooks'>
           <div className='pasOuvert'>
             <div className='image'>
-              <img src='./img/picothèque-key-house.png' alt='' />
+              <img src='./img/pictothèque-key-house.png' alt='' />
             </div>
-            <h3 className='titre'>
-              Vente{' '}
-              <button className='showMore' onClick={toggleOpen}>
-                {monVente ? '-' : '+'}
-              </button>
-            </h3>
+            <p className='p'>Vente </p>
+            <button className='showMore' onClick={toggleOpen}>
+              {monVente ? '-' : '+'}
+            </button>
           </div>
           {monVente && (
             <div className='ouvert'>
@@ -31,8 +30,8 @@ export default function Vente() {
               </p>
             </div>
           )}
-        </article>
+        </div>
       </div>
-    </div>
+    </Hooks4Styled>
   );
 }
